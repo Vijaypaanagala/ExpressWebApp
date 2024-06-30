@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-between;
+            background-color: black;
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+
+        .navigation > li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .navigation > li > a {
+            text-decoration: none;
+        }
+
+        .navigation a:hover {
+            color: goldenrod;
+        }
+
+        header {
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        li {
+            font-weight: bolder;
+        }
+
+        .main-content {
+            padding: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        .cars > li {
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cars > li > img {
+            height: 300px;
+            width: auto;
+            max-width: 100%;
+        }
+
+        .cars > li > .image-name {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #252525;
+        }
+
+        footer {
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .contact-details {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #252525;
+        }
+
+        .contact-details h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #252525;
+        }
+
+        body.dark-mode {
+            background-color: #252525;
+            color: black;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-label {
+            margin-right: 10px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #252525;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: black;
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Info</a></li>
+        </ul>
+    </nav>
+    <div class="toggle-container">
+        <span class="toggle-label"><b>Dark Mode:</b></span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    <header>
+        <h1>Welcome to Our Landing Page</h1>
+    </header>
+
+    <section class="main-content">
+        <h2>Responsive Car Landing Page</h2>
+    </section>
+    <nav>
+        <ul class="cars">
+            <li><img src="https://i1.wp.com/ridermagazine.com/wp-content/uploads/2016/02/Ducati-XDiavelS-featured.jpg?fit=1200%2C610" alt="Ferrari LaFerrari">ducati</li>
+            <li><img src="https://th.bing.com/th/id/OIP.grU1Df23mUThpdFpjynQfgAAAA?rs=1&pid=ImgDetMain" alt="Lamborghini Aventador">Lamborghini</li>
+            <li><img src="https://th.bing.com/th/id/OIP.mtYeBVCpYfyanrwX5ggw4QHaE8?w=2304&h=1536&rs=1&pid=ImgDetMain" alt="Porsche 911 Turbo S">yamaha</li>
+            <li><img src="https://cdn.visordown.com/field/image/87898.jpg" alt="Bugatti Chiron">KTM</li>
+            <li><img src="https://biker.report/wp-content/uploads/2018/10/Image_1-1.jpeg" alt="McLaren P1">BMW</li>
+            <li><img src="https://i.pinimg.com/736x/bd/41/14/bd41144b6934d11bd627413a21c05da9.jpg" alt="Aston Martin DBS Superleggera">Duke</li>
+            <li><img src="https://i.pinimg.com/originals/a5/17/7b/a5177bd398ee0938b12624a2034002d6.jpg">BMW</li>
+            <li><img src="https://cdp.azureedge.net/products/USA/DU/2023/MC/SPORT/SCRAMBLER_ICON/50/YELLOW/2000000006.jpg" alt="Rolls-Royce Phantom">scramber</li>
+        </ul>
+    </nav>
+
+    <footer>
+        <div class="contact-details">
+            <h2>&copy; 2024 Alpha Company</h2>
+            <h3>Contact Us</h3>
+            <p>Email: vivekkovilapu844@gmail.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: Bhimavaram town, Andhra Pradesh, India</p>
+        </div>
+    </footer>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode', darkModeToggle.checked);
+        });
+    </script>
+</body>
+</html>
